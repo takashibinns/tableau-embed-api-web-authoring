@@ -54,20 +54,20 @@ export default {
       index: 0,
       dashboards: [
         {
-          title: 'Economy',
-          url: 'https://us-east-1.online.tableau.com/#/site/devplatembed/views/Regional/Economy'
+          title: 'Customer Analysis',
+          url: 'https://10ax.online.tableau.com/#/site/datadevday/views/Superstore/Customers'
         },
         {
-          title: 'Claims Cycle Management',
-          url: 'https://us-east-1.online.tableau.com/#/site/devplatembed/views/ClaimsCycleManagement/ClaimCycleConsole'
+          title: 'Product Drilldown',
+          url: 'https://10ax.online.tableau.com/#/site/datadevday/views/Superstore/Product'
         },
         {
-          title: 'Claim Decision',
-          url: 'https://us-east-1.online.tableau.com/#/site/devplatembed/views/ClaimsCycleManagement/ClaimDecision'
+          title: 'Iris Identification',
+          url: 'https://10ax.online.tableau.com/#/site/datadevday/views/TempIris/IrisSpeciesIdentification'
         },
         {
-          title: 'Customers',
-          url: 'https://us-east-1.online.tableau.com/#/site/devplatembed/views/Superstore/Customers'
+          title: 'NCAA Golf',
+          url: 'https://10ax.online.tableau.com/#/site/datadevday/views/2019NCAAD1MensGolfChampionshipbyChrisDeMartinitableauonlineconverted/NCAAD1MensChampionship'
         },
       ]
     }
