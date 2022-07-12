@@ -24,8 +24,8 @@ let details = {
             url: 'https://10ax.online.tableau.com/#/site/datadevday/views/2019NCAAD1MensGolfChampionshipbyChrisDeMartinitableauonlineconverted/NCAAD1MensChampionship'
         },
     ],
-    currentDashboardIndex: 1,
-    isAuthoringMode: false,
+    currentDashboardIndex: 0,
+    isAuthoringMode: true,
     divId: 'tableauViz'
 }
 
@@ -115,7 +115,6 @@ function renderViz() {
 
     //  Append the viz to the div container
     tableauContainer.appendChild(viz);
-
 }
 
 //  Handler for web authoring toggle
