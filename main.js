@@ -2,6 +2,7 @@
 import {
     TableauViz,
     TableauAuthoringViz,
+    TableauEventType,
 } from 'https://10ax.online.tableau.com/javascripts/api/tableau.embedding.3.2.0.js';
 
 //  Define an object to define our dashboard list and help us track the web app's state
@@ -106,6 +107,7 @@ function renderViz() {
         viz = new TableauAuthoringViz();
         viz.src = dashboard.url;
         viz.hideCloseButton = true;
+        viz.addEventListener(TableauEventType.WorkbookPublishedAs, workbookPublishedAs)
     } else {
         //  Create a new tableau viz object
         viz = new TableauViz();
@@ -115,6 +117,19 @@ function renderViz() {
 
     //  Append the viz to the div container
     tableauContainer.appendChild(viz);
+}
+
+//  Handler for when users click Publish As in web authoring
+function workbookPublishedAs(event){
+    
+    //  User is saving the dashboard as a copy of the original, save the new copy's URL 
+    details.dashboards[details.currentDashboardIndex].url = event.detail.newUrl;
+    
+    //  Switch back to view-only mode
+    details.isAuthoringMode = false;
+    
+    //  Re-render the viz, to show it in view-only mode
+    renderViz()
 }
 
 //  Handler for web authoring toggle
